@@ -43,7 +43,9 @@ ol { margin-left: 25px; }
 #Footer { padding: 10px; }
 
 .Conversation { width: 60%; margin-left: 0; list-style: none; }
-	.Conversation .Avatar { float: left; margin: 0 20px 10px 0; }
+	.Conversation .Avatar { float: left; margin: 0 20px 10px 0; font-size: 0; }
+	.Conversation .Avatar:hover { text-decoration: none; }
+	.Conversation .Avatar:hover .name { display: block; font-size: 16px; }
 	.Conversation .Message:first-child { border-top: none; padding: 0 10px 10px 0; }
 	.Conversation .Message { min-height: 70px; border-bottom: 1px solid #292936; border-top: 1px solid #2993bf; padding: 10px 10px 10px 0; }
 		.Conversation .Message .text, .Conversation .Message .time { margin: 0 0 10px 94px; text-shadow: 0 1px 0 #000; }
@@ -51,7 +53,7 @@ ol { margin-left: 25px; }
 	.Avatar .thumbnail { display: block; }
 	.Avatar .name { display: none; }
 
-.Chat { position: relative; width: 60%; border-top: 1px solid #2993bf; padding: 20px 0 0;  }
+.Chat { position: relative; width: 60%; height: 42px; overflow: hidden; border-top: 1px solid #2993bf; padding: 20px 0 0;  }
 	.Chat .input { width: 87.7%; padding: 10px 95px 10px 20px; background: rgba(0, 0, 0, 0.3); border: 1px solid rgba(0, 0, 0, 0.3); box-shadow: 2px 2px 5px rgba(0,0,0,.3) inset; color: #fff; font-size: 16px; }
-	.Chat .input:focus + .submit, .Chat .submit:focus { display: block; }
-	.Chat .submit { display: none; position: absolute; top: 20px; right: 0px; background: -moz-linear-gradient(top, #32343d, #1f2026); border: 1px solid #292936; border-radius: 2px; padding: 9px 20px; font-size: 16px; color: #fff; text-shadow: 0 1px 0 #000; cursor: pointer; }
+	.Chat .submit { position: absolute; top: 20px; right: 0px; background: -moz-linear-gradient(top, #32343d, #1f2026); background: -webkit-linear-gradient(top, #32343d, #1f2026); border: 1px solid #292936; padding: 10px 20px; font-size: 16px; color: #fff; text-shadow: 0 1px 0 #000; cursor: pointer; }
+	.Chat .submit:active { background: -moz-linear-gradient(top, #1f2026, #32343d); background: -webkit-linear-gradient(top, #1f2026, #32343d); }
