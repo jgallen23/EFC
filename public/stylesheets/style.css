@@ -37,20 +37,21 @@ ol { margin-left: 25px; }
 .Heading1 { font-size: 36px; font-family: Georgia; font-style: italic; text-shadow: 0 1px 0 #000; }
 .Heading2 { font-size: 24px; font-family: Georgia; text-shadow: 0 1px 0 #000; text-decoration: underline; }
 .Heading3 { font-size: 18px; }
-.Note { font-size: 11px; color: #F7FDCF; text-shadow: 0 1px 0 #000000; }
+.Note { font-size: 11px; color: #F7FDCF; }
 #Header { padding: 10px; }
 #Body { margin: 40px 0; }
 #Footer { padding: 10px; }
 
 .Conversation { width: 60%; margin-left: 0; list-style: none; }
-	.Conversation .Avatar { float: left; margin: 0 10px 10px 0; }
-	.Conversation .Message:first-child { border-top: none; }
+	.Conversation .Avatar { float: left; margin: 0 20px 10px 0; }
+	.Conversation .Message:first-child { border-top: none; padding: 0 10px 30px 0; }
 	.Conversation .Message { border-bottom: 1px solid #292936; border-top: 1px solid #2993bf; padding: 40px 10px 30px 0; }
-		.Conversation .Message .text, .Conversation .Message .time { margin: 0 0 10px 84px; }
+		.Conversation .Message .text, .Conversation .Message .time { margin: 0 0 10px 94px; text-shadow: 0 1px 0 #000; }
 .Avatar { padding: 4px; box-shadow: 2px 2px 5px rgba(0,0,0,.8); border: 1px solid #E2E7D7; }
 	.Avatar .thumbnail { display: block; }
 	.Avatar .name { display: none; }
 
-.Chat { position: relative; width: 60%; border-top: 1px solid #2993bf; padding: 20px 0 0 ; }
-	.Chat .input { width: 97.3%; padding: 5px 10px; }
-	.Chat .submit { position: absolute; top: 26px; right: 10px; }
+.Chat { position: relative; width: 60%; border-top: 1px solid #2993bf; padding: 20px 0 0;  }
+	.Chat .input { width: 87.7%; padding: 10px 95px 10px 20px; background: rgba(0, 0, 0, 0.3); border: 1px solid rgba(0, 0, 0, 0.3); box-shadow: 2px 2px 5px rgba(0,0,0,.3) inset; color: #fff; font-size: 16px; }
+	.Chat .input:focus + .submit, .Chat .submit:focus { display: block; }
+	.Chat .submit { display: none; position: absolute; top: 20px; right: 0px; background: -moz-linear-gradient(top, #32343d, #1f2026); border: 1px solid #292936; border-radius: 2px; padding: 9px 20px; font-size: 16px; color: #fff; text-shadow: 0 1px 0 #000; cursor: pointer; }
