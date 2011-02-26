@@ -37,7 +37,7 @@ app.get('/', function(req, res){
   });
 });
 
-
+// Rooms
 var rooms = {};
 
 // Sockets
