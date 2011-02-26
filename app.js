@@ -43,9 +43,9 @@ var rooms = {};
 // Sockets
 var socket = io.listen(app);
 socket.on('connection', function(client) {
-	client.on("message", function(message) {
-		console.log(message);
-		var data = JSON.parse(message);
+
+	client.on("message", function(clientJson) {
+		var data = JSON.parse(clientJson);
 		switch(data.type) {
 			case "join":
 				if (!rooms[data.room]) {
@@ -54,11 +54,11 @@ socket.on('connection', function(client) {
 				rooms[data.room].clients.push(client);
 				console.log("client joined room: "+ data.room);
 				break;
-			case "message":
+			case "chat":
 				var clients = rooms[data.room].clients;
 				for (var c in clients) {
 					if (clients[c].sessionId != client.sessionId)
-						clients[c].send(message);
+						clients[c].send(clientJson);
 				}
 				break;
 		}

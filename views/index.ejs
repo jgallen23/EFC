@@ -22,3 +22,17 @@
 	<input type="text" name="message" value="" class="input">
 	<input type="submit" name="" value="Send" class="submit" />
 </form>
+
+
+<script>
+
+$('.input').focus(function() {
+	$('.submit').fadeIn();
+});
+
+$('.input').focusout(function() {
+	$('.submit').fadeOut();
+});
+
+
+</script>

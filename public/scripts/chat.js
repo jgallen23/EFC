@@ -4,7 +4,7 @@ jQuery(function() {
 		$(".Conversation").append(messageNode);
 	}
 	var room = "default";
-	var socket = new io.Socket("10.0.1.21");
+	var socket = new io.Socket(location.hostname);
 	socket.connect();
 	socket.on("connect", function() {
 		console.log("connect");
@@ -23,7 +23,7 @@ jQuery(function() {
 
 	$("form").bind("submit", function() {
 		var message = $("input:text").val();
-		socket.send('{ "type": "message", "room": "' + room + '", "message": "' + message + '"}');
+		socket.send('{ "type": "chat", "room": "' + room + '", "message": "' + message + '"}');
 		$("input:text").val('');
 		addMessageNode(message);
 		return false;
