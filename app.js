@@ -55,8 +55,6 @@ socket.on('connection', function(client) {
 				console.log("client joined room: "+ data.room);
 				break;
 			case "chat":
-				data.room == "default" 
-
 				var clients = rooms[data.room].clients;
 				for (var c in clients) {
 					if (clients[c].sessionId != client.sessionId)
