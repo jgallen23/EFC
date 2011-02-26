@@ -44,8 +44,8 @@ ol { margin-left: 25px; }
 
 .Conversation { width: 60%; margin-left: 0; list-style: none; }
 	.Conversation .Avatar { float: left; margin: 0 20px 10px 0; }
-	.Conversation .Message:first-child { border-top: none; padding: 0 10px 30px 0; }
-	.Conversation .Message { border-bottom: 1px solid #292936; border-top: 1px solid #2993bf; padding: 40px 10px 30px 0; }
+	.Conversation .Message:first-child { border-top: none; padding: 0 10px 10px 0; }
+	.Conversation .Message { min-height: 70px; border-bottom: 1px solid #292936; border-top: 1px solid #2993bf; padding: 10px 10px 10px 0; }
 		.Conversation .Message .text, .Conversation .Message .time { margin: 0 0 10px 94px; text-shadow: 0 1px 0 #000; }
 .Avatar { padding: 4px; box-shadow: 2px 2px 5px rgba(0,0,0,.8); border: 1px solid #E2E7D7; }
 	.Avatar .thumbnail { display: block; }
