@@ -8,8 +8,10 @@ var express = require('express');
 var app = module.exports = express.createServer();
 var io = require("socket.io");
 
-// Configuration
+// Rooms
+var rooms = {};
 
+// Configuration
 app.configure(function(){
   app.set('views', __dirname + '/views');
   app.set('view engine', 'ejs');
@@ -28,7 +30,6 @@ app.configure('production', function(){
 });
 
 // Routes
-
 app.get('/', function(req, res){
   res.render('index', {
     locals: {
@@ -55,8 +56,6 @@ app.get('/hi_:name', function(req, res){
   });
 });
 
-// Rooms
-var rooms = {};
 
 // Sockets
 var socket = io.listen(app);

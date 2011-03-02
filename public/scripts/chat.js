@@ -2,7 +2,7 @@ jQuery(function() {
 	var addMessageNode = function(message) {
 		var messageNode = $('<li class="Message"><a href="" class="Avatar"><img src="http://dummyimage.com/64x64/000/fff.jpg" /><span class="name">user 1</span></a><p>'+message+'</p>');
 		$(".Conversation").append(messageNode);
-	}
+	};
 	var room = "default";
 	var socket = new io.Socket(location.hostname);
 	socket.connect();
