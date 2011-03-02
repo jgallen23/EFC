@@ -57,8 +57,9 @@ socket.on('connection', function(client) {
 			case "chat":
 				var clients = rooms[data.room].clients;
 				for (var c in clients) {
-					if (clients[c].sessionId != client.sessionId)
+					if (clients[c].sessionId != client.sessionId) {
 						clients[c].send(clientJson);
+					}
 				}
 				break;
 		}
@@ -72,5 +73,5 @@ socket.on('connection', function(client) {
 
 if (!module.parent) {
   app.listen(3000);
-  console.log("Express server listening on port %d", app.address().port)
+  console.log("Express server listening on port %d", app.address().port);
 }
