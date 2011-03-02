@@ -69,9 +69,13 @@ socket.on('connection', function(client) {
 					rooms[data.room] = { 'clients': [] };
 				}
 				rooms[data.room].clients.push(client);
-				console.log("client joined room: "+ data.room);
+				console.log("joined room: "+ data.room);
 				break;
-			case "chat":
+			case "leave":
+				console.log("left room: "+ data.room);
+				break;
+			case "newMessage":
+				console.log("message: " + clientJson);
 				var clients = rooms[data.room].clients;
 				for (var c in clients) {
 					if (clients[c].sessionId != client.sessionId) {
