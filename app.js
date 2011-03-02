@@ -32,7 +32,25 @@ app.configure('production', function(){
 app.get('/', function(req, res){
   res.render('index', {
     locals: {
-      title: 'Express'
+      title: 'Home'
+    }
+  });
+});
+
+app.get('/chat/', function(req, res){
+  res.render('chat', {
+    locals: {
+      title: 'Chat'
+    }
+  });
+});
+
+// this is a test just so Newton can see how routes are created
+app.get('/hi_:name', function(req, res){
+	res.render('hi', {
+    locals: {
+		title: 'Chat',
+		name: req.params.name
     }
   });
 });
